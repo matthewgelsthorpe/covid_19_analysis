@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<head>
+    <title>COVID Global Mapper</title>
+</head>
+<link rel="stylesheet" href="../static/map_page.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html>
+    <link rel="stylesheet" href="./../static/table.css">
+    <body style="font-family: Arial">
+        <header>{% block head %}{% endblock %}</header>
+            <div style="width: 100%; height: 100%; position: absolute;">
+                <div class="header"
+                    style="position: relative; text-align: center; height: 5%;">
+                    <header style="text-align: center; font-family: rockwell;width: 100%;margin: 0; color: white; font-size: 20px;">
+                        COVID Data Maps
+                        <a href="/"  id = home><i class="fa fa-home" id="homeicon" style="top:0; right:3%; font-size: 30px; position: fixed; padding-left: 10px; padding-top: 15px;"></i></a>
+                        <a href="/covid_maps"  id = home><i class="fa fa-refresh" id="refresh" aria-hidden="true" style="top:0;left:3%; font-size: 30px; position: fixed; padding-left: 10px; padding-top: 15px;"></i></a>
+                    </header>
+                </div>
+                <div class="WorkareaAndControls" style="width: 100%; height: 100%; position: fixed;">
+                    <div class="Controls"
+                        style="width: 30%;height: 100%; position: absolute; float: left; margin: 0;background-color: #333333;">
+                        <form action="/MapData" method="POST" style ="padding-left:10%; padding-bottom: 50px; margin-top: 10%;">  <!--change action to some soft of success lgin page-->
+                            <div class="dropdown">
+                              <button class="button" style="vertical-align:middle; margin-top: 5%; color: white;" type="button" data-toggle="dropdown">CHOSE MAP DATA
+                                <span class="caret"></span></button>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Deaths</a></li>
+                                <li><a href="#">Cases</a></li>
+                                <li><a href="#">Mortality rate</a></li>
+                              </ul>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="Workarea" style="width: 70%;height: 100%; position: relative; float: right; margin: 0;">
+                        {% include "map.html" %}
+                    </div>
+
+                </div>
+            </div>
+    </body>
+</html>
