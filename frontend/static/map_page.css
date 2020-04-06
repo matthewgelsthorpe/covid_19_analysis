@@ -1,0 +1,112 @@
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  font-family: Rockwell;
+  font-size: 10;
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 40px;
+  text-align: center;
+  color: white;
+  color: #fff;
+  background: linear-gradient(-45deg, #e6eeff, #99bbff, #4d88ff, #004de6, #003cb3);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 25%;
+    }
+    50% {
+        background-position: 100% 25%;
+    }
+    100% {
+        background-position: 0% 25%;
+    }
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #6699ff;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 40px;
+  padding: 6px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  /* display: inline-block; */
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button #submit span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+  color: white;
+  font-weight: bold;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+
+a:hover {
+  background-color: white;
+  color:lightcoral;
+}
+a #home {color: white}
+
+#home {color: white}
+
+#home {color: white}
+
+.fa-home:hover{
+    color:lightcoral;
+   }
