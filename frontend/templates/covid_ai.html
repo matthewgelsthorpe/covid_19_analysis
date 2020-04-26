@@ -10,14 +10,15 @@
     <body>
         <header>{% block head %}{% endblock %}</header>
             <div style="width: 100%; height: 100%; position: absolute;">
-                <div class="header" style="position: relative; text-align: center; height: 5%;">
-                    <header style="text-align: center; font-family: rockwell;width: 100%;margin: 0; color: white; font-size: 20px;">
-                            COVID AI Projection
+                <div class="header" style="position: relative; text-align: center; height: 2%;">
+                    <header style="text-align: center; font-family: Arial, Helvetica, sans-serif;width: 100%;margin: 0; color: white; font-size: 20px;">
+                            <h1 style="margin-bottom: 10px;">COVID AI Projection</h1>
                             <a href="/" id=home style="text-decoration: none; color: white;"><i class="fa fa-home" id="homeicon"
-                                    style="top:0;  text-decoration: none; right:3%; font-size: 30px; position: fixed; padding-left: 10px; padding-top: 15px;"></i></a>
+                                    style="top:0;  text-decoration: none; right:3%; font-size: 30px; position: fixed; padding-left: 10px; padding-top: 10px;"></i></a>
                     </header>
                 </div> 
                 <div class="WorkareaAndControls" style="width: 100%; height: 100%; position: fixed;">
+                    <div style="width: 100%; margin-bottom: 3%; border: 1px; padding-bottom: 3%;">
                     <form action="/covid_ai" method="POST" style="padding-left:7%; padding-bottom: 50px; margin-top: 8%; float: left;">
                         <label for="forecastDate" style="font-family: Arial; font-size: 24px;">Date for Prediction:</label>
                         <input type="date" id="Date" name="forecastDate" style="font-family: Arial; font-size: 24px;">
@@ -28,6 +29,12 @@
                         </select>
                         <button class="button" style="color: white; font-size: 24px;" type="submit">Submit<span class="caret" id="submit"></span></button>
                     </form>
+                    </div>
+                    <div style="width: 100%; float: left;">
+                    <h1 style="padding-left:7%">{{ header }}</h1><br>
+                    <h3 style="padding-left:7%">{{ noCases }}</h1><br>
+                    <h3 style="padding-left:7%">{{ noDeaths }}</h3><br>
+                    </div>
                 </div>
             </div>
     </body>
